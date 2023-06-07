@@ -1,0 +1,179 @@
+/* Navbar */
+.navbar {
+    padding: 1rem;
+    background-color: aqua;
+}
+
+.navbar-collapse {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-iconos {
+    font-size: 2rem;
+}
+
+.navbar-titulo {
+    font-size: 1.3rem;
+}
+
+/* Estilo general */
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.seccion-oscura {
+    padding: 20px;
+    background-color: #252525;
+    color:#f5f6f7
+}
+
+.seccion-clara {
+    padding: 20px;
+    background-color: #f5f6f7;
+    color:#252525
+}
+
+/* Seccion Hero */
+
+.disenio {
+    border: 1px solid blue;
+}
+
+.perfil {
+    background-color: #f5f6f7;
+    min-height: 150px;
+    text-align: center;
+    padding: 10px;
+}
+
+.perfil h1 {
+    font-size: 2rem;
+}
+
+.perfil h2 {
+    font-size: 1.5rem;
+}
+
+.perfil p {
+    font-size: 1.1rem;
+    padding: 10px 0;
+}
+
+.perfil img {
+    border: black solid 2px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+/* Experiencia */
+.experiencia {
+    padding: 10px;
+}
+
+.experiencia h1 {
+    font-size: 1.6rem;
+}
+
+.experiencia h2 {
+    font-size: 1.2rem;
+}
+
+.experiencia p {
+    font-size: 1.1rem;
+    padding: 5px 0;
+}
+
+.exprow {
+    padding: 15px;
+}
+/* Estudios */
+.estudios {
+    padding: 10px;
+}
+.estudios h1 {
+    font-size: 1.6rem;
+}
+.estudios h2 {
+    font-size: 1.2rem;
+}
+.estudios p {
+    font-size: 1.1rem;
+}
+
+.edurow {
+    padding: 15px;
+}
+
+/* Habilidades */
+.habilidades {
+    padding: 10px;
+}
+
+.habilidades h1 {
+    font-size: 1.6rem;
+}
+
+.habilidades h2 {
+    font-size: 1.2rem;
+}
+
+.habrow {
+    padding: 20px;
+}
+
+/* Proyectos */
+.proyectos {
+    padding: 10px;
+}
+
+.proyectos h1 {
+    font-size: 1.6rem;
+}
+
+.proyectos h2 {
+    font-size: 1.2rem;
+}
+
+.proyectos p {
+    font-size: 1.1rem;
+}
+
+.prorow {
+    padding: 20px;
+}
+
+.proyectos img {
+    border: black solid 2px;
+    border-radius: 4%;
+    width: 150px;
+    height: 150px;
+}
+
+/* Footer */
+.footer {
+    font-size: 0.8rem;
+}
+
+/* Adaptable Responsivo */
+@media screen and (max-width: 768px) {
+    .navbar-brand {
+        display: none;
+    }
+}
+
+/* Login webpages y Alta/edit datos gral */
+.gradient-custom {
+    /* fallback for old browsers */
+    background: aqua;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(25, 25, 25, 1), rgba(37, 117, 252, 1));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(25, 25, 25, 1), rgba(37, 117, 252, 1))
+    }

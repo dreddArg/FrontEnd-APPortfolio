@@ -1,0 +1,40 @@
+    <!-- Seccion Educacion -->
+    <section class="estudios seccion-clara">
+        <div class="container text-center">
+          <div class="row">
+            <h1>{{datosWeb.educacionTitulo}}</h1>
+          </div>
+          <div class="col align-items-center">
+            <button type="button" class="btn btn-light" routerLink="/nuevaedu" *ngIf="isLogged"><i class="bi bi-plus-circle"></i></button>
+          </div>
+          <div class="row align-items-center edurow" *ngFor="let edu of educacion">
+            <div class="col-12 col-md-4 text-center">
+              <div class="row justify-content-center">
+                <div class="col-12 col-md-4">
+                  <img [alt]="edu.nombreInstitucion"><h2>{{edu.nombreInstitucion}}</h2>
+                </div>
+                <div>
+                  <p><span class="badge rounded-pill text-bg-dark">{{edu.fecha}}</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-8"  *ngIf="!isLogged"> <!-- si no esta logueado muestra datos en 8 columnas de Boostrap -->
+              <p>{{edu.descripcion}}</p>
+            </div>
+            <div class="col-12 col-md-6"  *ngIf="isLogged"> <!-- si esta logueado ajusto los datos a 6 columnas por iconos de editar y eliminar -->
+              <p>{{edu.descripcion}}</p>
+            </div>
+            <div class="col-6 col-md-1 text-end" *ngIf="isLogged">
+              <button type="button" class="btn btn-light" routerLink="/editedu/{{edu.id}}">
+                <i class="bi bi-pencil"></i>
+              </button>
+            </div>
+            <div class="col-6 col-md-1 text-start" *ngIf="isLogged">
+              <button type="button" class="btn btn-light" (click)="deleteEducacion(edu.id)">
+                <i class="bi bi-trash3"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+  

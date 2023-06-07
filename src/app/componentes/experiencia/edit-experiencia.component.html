@@ -1,0 +1,46 @@
+<section class="vh-100 gradient-custom" *ngIf="expLab">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+                <div class="mb-md-5 mt-md-4 pb-5">
+                    <h3 class="fw-bold mb-2">Modificacion de Experiencia</h3>
+                    <p class="text-white-50 mb-5">Complete todos los datos</p>
+  
+                    <form #f="ngForm" (ngSubmit)="onUpdate()" novalidate>
+                        <div class="form-outline form-white mb-4">
+                            <label class="form-label" for="nombreEmpresa">Nombre de Empresa:</label>
+                            <input type="text" id="nombreEmpresa" name="nombreEmpresa" class="form-control form-control-lg" [(ngModel)]="expLab.nombreEmpresa" required />
+                        </div>
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="col-6">
+                                <div class="form-outline form-white mb-4">
+                                    <label class="form-label" for="nombreEmpresa">Fecha Inicio:</label>
+                                    <input type="text" id="fechaInicial" name="fechaInicial" class="form-control form-control-lg" [(ngModel)]="expLab.fechaInicial" required />
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-outline form-white mb-4">
+                                    <label class="form-label" for="nombreEmpresa">Fecha Salida:</label>
+                                    <input type="text" id="fechaFinal" name="fechaFinal" class="form-control form-control-lg" [(ngModel)]="expLab.fechaFinal" required />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-outline form-white mb-4">
+                            <label class="form-label" for="nombreEmpresa">URL Logo:</label>
+                            <input type="text" id="logo" name="logo" class="form-control form-control-lg" [(ngModel)]="expLab.logo" required />
+                        </div>
+                        <div class="form-outline form-white mb-4">
+                            <label class="form-label" for="nombreEmpresa">Descripcion:</label>
+                            <textarea id="descripcion" rows="3" name="descripcion" class="form-control form-control-lg" [(ngModel)]="expLab.descripcion" required></textarea>
+                        </div>
+                        <button class="btn btn-outline-light btn-lg px-5" type="submit">Guardar Cambios</button>
+                    </form>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

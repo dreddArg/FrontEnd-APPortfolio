@@ -1,0 +1,101 @@
+{
+    "titulo": "Argentina Programa #YoProgramo4",
+    "logoPrincipalUrl": "/assets/img/aplogo.png",
+    "hrefPrincipal": "https://argentinaprograma.inti.gob.ar",
+    "imagenPrincipalUrl": "/assets/img/fondo.png",
+    "redesSociales": [
+      {
+        "href": "#",
+        "class": "bi bi-whatsapp navbar-iconos"
+      },
+      {
+        "href": "https://www.facebook.com/durelli.sergio",
+        "class": "bi bi-facebook navbar-iconos"
+      },
+      {
+        "href": "https://twitter.com/SDurelli86",
+        "class": "bi bi-twitter navbar-iconos"
+      },
+      {
+        "href": "https://instagram.com/",
+        "class": "bi bi-instagram navbar-iconos"
+      },
+      {
+        "href": "mailto:sergiodurelli@hotmail.com",
+        "class": "bi bi-envelope-at navbar-iconos"
+      }
+    ],
+    "fotoPerfilUrl": "/assets/img/sergio.jpg",
+    "nombre": "Sergio Durelli",
+    "bio": "Curioso Informático",
+    "longBio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt auctor risus, in dignissim nunc blandit ut. Cras placerat orci vitae orci ullamcorper, at elementum enim suscipit. Sed sodales sit amet sapien in luctus. Suspendisse potenti.",
+    "experienciaTitulo": "Experiencia Laboral",
+    "experiencia": [
+      {
+        "logo": "222",
+        "nombreEmpresa": "Empresa 123",
+        "fechaInicial": "2023",
+        "fechaFinal": "2023",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      {
+        "logo": "333",
+        "nombreEmpresa": "Empresa 456",
+        "fechaInicial": "2023",
+        "fechaFinal": "2023",
+        "descripcion": "Aliquam tincidunt auctor risus, in dignissim nunc blandit ut."
+      }
+    ],
+    "educacionTitulo": "Educacion y Conocimientos",
+    "educacion": [
+      {
+        "logo": "",
+        "nombreInstitucion": "Institucion 1",
+        "fechaInicial": "",
+        "fechaFinal": "",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt auctor risus, in dignissim nunc blandit ut."
+      },
+      {
+        "logo": "",
+        "nombreInstitucion": "Institucion 2",
+        "fechaInicial": "",
+        "fechaFinal": "",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt auctor risus, in dignissim nunc blandit ut."
+      }
+    ],
+    "habilidadesTitulo": "Habilidades e Intereses",
+    "habilidades": [
+      {
+        "nombre": "HTML, CSS, and JavaScript",
+        "style": "width: 15%",
+        "porcentaje": "15%"
+      },
+      {
+        "nombre": "Inglés",
+        "style": "width: 50%",
+        "porcentaje": "50%"
+      },
+      {
+        "nombre": "Networking",
+        "style": "width: 70%",
+        "porcentaje": "70%"
+      }
+    ],
+    "proyectosTitulo": "Proyectos",
+    "proyectos": [
+      {
+        "logo": "",
+        "nombreProyecto": "Proyecto 1",
+        "fechaInicial": "",
+        "fechaFinal": "",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt auctor risus, in dignissim nunc blandit ut."
+      },
+      {
+        "logo": "",
+        "nombreProyecto": "Proyecto 2",
+        "fechaInicial": "",
+        "fechaFinal": "",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt auctor risus, in dignissim nunc blandit ut."
+      }
+    ]
+  }
