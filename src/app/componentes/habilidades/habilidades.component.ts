@@ -3,7 +3,6 @@ import { DatosWeb } from 'src/app/model/datos-web';
 import { Habilidades } from 'src/app/model/habilidades';
 import { DatosWebService } from 'src/app/servicios/datos-web.service';
 import { HabilidadesService } from 'src/app/servicios/habilidades.service';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
@@ -15,9 +14,7 @@ export class HabilidadesComponent implements OnInit {
 
   datosWeb: DatosWeb; // = new DatosWeb("", "", "", "", "", "", "", "","","", 0);
   habilidades: Habilidades[] = [];
-  habilidades2: Habilidades[];
-  sergio: string;
-
+  
   constructor(private datosWebService: DatosWebService, private habilidadesService: HabilidadesService, private tokenService: TokenService) { }
 
   isLogged = false;
