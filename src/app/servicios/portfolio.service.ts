@@ -8,7 +8,9 @@ import { Persona } from '../model/persona';
 })
 export class PortfolioService {
 
-  url:string = 'https://backend-apportfolio.onrender.com/api/personas/get/';
+  backendURL:string = 'https://backend-apportfolio.onrender.com/api/personas/get/';
+  //backendURL:string = 'http://localhost:8080/';
+  apiPersonas: string = 'api/personas/';
   
   constructor(private http:HttpClient) { }
 
@@ -17,8 +19,12 @@ export class PortfolioService {
     return this.http.get('/assets/data/data.json');
   }
 
-  obtenerPerfil():Observable<Persona> { 
+  public obtenerPerfil(id: number):Observable<Persona> { 
     //return this.http.get('/assets/data/data.json');
-    return this.http.get<Persona>(this.url+"1");
+    return this.http.get<Persona>(this.backendURL + this.apiPersonas + `get/${id}`);
+  }
+
+  public updatePer(id: number, persona: Persona): Observable<any> {
+    return this.http.put<any>(this.backendURL + this.apiPersonas + `update/${id}`, persona);
   }
 }

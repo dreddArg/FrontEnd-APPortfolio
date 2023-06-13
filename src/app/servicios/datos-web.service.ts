@@ -8,13 +8,14 @@ import { Observable } from 'rxjs';
 })
 export class DatosWebService {
 
-  url:string = 'https://backend-apportfolio.onrender.com/api/datosweb/';
-  getDatosWeb:string = 'get/';
+  backendURL:string = 'https://backend-apportfolio.onrender.com/';
+  //backendURL:string = 'http://localhost:8080/';
+  apiDatosWeb:string = 'api/datosweb/get/';
   idDatosWeb:string = '1';
 
   constructor(private http:HttpClient) { }
 
   public obtenerDatosWeb():Observable<DatosWeb> {
-    return this.http.get<DatosWeb>(this.url+this.getDatosWeb+this.idDatosWeb);
+    return this.http.get<DatosWeb>(this.backendURL+this.apiDatosWeb+this.idDatosWeb);
   }
 }

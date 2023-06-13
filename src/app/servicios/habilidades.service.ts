@@ -8,27 +8,29 @@ import { Habilidades } from '../model/habilidades';
 })
 export class HabilidadesService {
 
-  habURL:string = 'https://backend-apportfolio.onrender.com/api/habilidades/';
+  backendURL:string = 'https://backend-apportfolio.onrender.com/';
+  //backendURL:string = 'http://localhost:8080/';
+  apiHabilidades: string = 'api/habilidades/';
 
   constructor(private httpClient: HttpClient) { }
 
   public listaHab(): Observable<Habilidades[]> {
-    return this.httpClient.get<Habilidades[]>(this.habURL + `get`);
+    return this.httpClient.get<Habilidades[]>(this.backendURL + this.apiHabilidades + `get`);
   }
 
   public detailHab(id: number): Observable<Habilidades> {
-    return this.httpClient.get<Habilidades>(this.habURL + `detail/${id}`);
+    return this.httpClient.get<Habilidades>(this.backendURL + this.apiHabilidades + `detail/${id}`);
   }
 
   public saveHab(habilidades: Habilidades): Observable<any> {
-    return this.httpClient.post<any>(this.habURL + `save`, habilidades);
+    return this.httpClient.post<any>(this.backendURL + this.apiHabilidades + `save`, habilidades);
   }
 
   public updateHab(id: number, habilidades: Habilidades): Observable<any>{
-    return this.httpClient.put<any>(this.habURL + `update/${id}`, habilidades);
+    return this.httpClient.put<any>(this.backendURL + this.apiHabilidades + `update/${id}`, habilidades);
   }
 
   public deleteHab(id: number): Observable<any> {
-    return this.httpClient.delete<any>(this.habURL + `delete/${id}`);
+    return this.httpClient.delete<any>(this.backendURL + this.apiHabilidades + `delete/${id}`);
   }
 }

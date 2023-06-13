@@ -10,4 +10,11 @@
           <p>{{miPerfil.longBio}}</p>
         </div>
       </div>
+      <div class="row justify-content-center align-items-center" *ngIf="isLogged">
+        <div>
+          <button type="button" class="btn btn-light" routerLink="/editper/1">
+            <i class="bi bi-pencil"></i>
+          </button>
+        </div>
+      </div>
     </section>

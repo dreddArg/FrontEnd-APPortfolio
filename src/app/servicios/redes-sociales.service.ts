@@ -8,13 +8,14 @@ import { RedesSociales } from '../model/redes-sociales';
 })
 export class RedesSocialesService {
 
-  url:string = 'https://backend-apportfolio.onrender.com/api/redessociales/';
-  getRedesSociales:string = 'get/';
+  backendURL:string = 'https://backend-apportfolio.onrender.com/';
+  //backendURL:string = 'http://localhost:8080/';
+  apiRedesSociales:string = 'api/redessociales/';
 
   constructor(private http: HttpClient) { }
 
   obtenerRedesSociales():Observable<RedesSociales[]> {
-    return this.http.get<RedesSociales[]>(this.url+this.getRedesSociales);
+    return this.http.get<RedesSociales[]>(this.backendURL + this.apiRedesSociales + `get`);
   }
   
 }

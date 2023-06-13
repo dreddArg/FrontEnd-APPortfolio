@@ -8,29 +8,30 @@ import { Educacion } from '../model/educacion';
 })
 export class EducacionService {
 
-  url:string = 'https://backend-apportfolio.onrender.com/api/educacion/';
-  getEducacion:string = 'get/';
+  backendURL:string = 'https://backend-apportfolio.onrender.com/';
+  //backendURL:string = 'http://localhost:8080/';
+  apiEducacion:string = 'api/educacion/';
 
   constructor(private http: HttpClient) { }
 
   public obtenerEducacion(): Observable<Educacion[]> {
-    return this.http.get<Educacion[]>(this.url+this.getEducacion);
+    return this.http.get<Educacion[]>(this.backendURL + this.apiEducacion + `get`);
   }
 
   public detailEdu(id: number): Observable<Educacion> {
     // user comillas inclinadas `` si se quiere poner ruta
-    return this.http.get<Educacion>(this.url + `detail/${id}`);
+    return this.http.get<Educacion>(this.backendURL + this.apiEducacion + `detail/${id}`);
   }
 
   public saveEdu(educacion: Educacion): Observable<any> {
-    return this.http.post<any>(this.url + `save`, educacion);
+    return this.http.post<any>(this.backendURL + this.apiEducacion + `save`, educacion);
   }
 
   public updateEdu(id: number, educacion: Educacion): Observable<any> {
-    return this.http.put<any>(this.url + `update/${id}`, educacion);
+    return this.http.put<any>(this.backendURL + this.apiEducacion + `update/${id}`, educacion);
   }
 
   public deleteEdu(id: number): Observable<any> {
-    return this.http.delete<any>(this.url + `delete/${id}`);
+    return this.http.delete<any>(this.backendURL + this.apiEducacion + `delete/${id}`);
   }
 }

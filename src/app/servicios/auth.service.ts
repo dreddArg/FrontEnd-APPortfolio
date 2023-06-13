@@ -10,16 +10,17 @@ import { LoginUsuario } from '../model/login-usuario';
 })
 export class AuthService {
 
-  authURL = 'https://backend-apportfolio.onrender.com/auth/';
-  
+  backendURL = 'https://backend-apportfolio.onrender.com/';
+  //backendURL = 'http://localhost:8080/';
+
   constructor(private httpClient: HttpClient) { }
 
   public nuevo(nuevoUsuario: NuevoUsuario): Observable<any> {
-    return this.httpClient.post<any>(this.authURL + 'nuevo', nuevoUsuario);
+    return this.httpClient.post<any>(this.backendURL + 'auth/nuevo', nuevoUsuario);
   }
 
   public login(loginUsuario: LoginUsuario): Observable<JwtDto> {
-    return this.httpClient.post<JwtDto>(this.authURL + 'login', loginUsuario);
+    return this.httpClient.post<JwtDto>(this.backendURL + 'auth/login', loginUsuario);
   }
 
 }
