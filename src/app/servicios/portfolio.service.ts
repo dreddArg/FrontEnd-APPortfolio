@@ -8,7 +8,7 @@ import { Persona } from '../model/persona';
 })
 export class PortfolioService {
 
-  backendURL:string = 'https://backend-apportfolio.onrender.com/api/personas/get/';
+  backendURL:string = 'https://backend-apportfolio.onrender.com/';
   //backendURL:string = 'http://localhost:8080/';
   apiPersonas: string = 'api/personas/';
   
