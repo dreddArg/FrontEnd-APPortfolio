@@ -25,7 +25,7 @@
                             <textarea id="descripcion" rows="3" name="descripcion" class="form-control form-control-lg" [(ngModel)]="perAEditar.longBio" required></textarea>
                         </div>
                         <div class="imagen">
-                            <img [src]="storageService.urlFile" width="150px">
+                            <img [src]="storageService?.urlFile" width="150px">
                         </div>
                         <div class="div">
                             <label>Seleccione imagen:</label>
