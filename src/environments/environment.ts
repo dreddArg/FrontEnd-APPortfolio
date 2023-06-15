@@ -1,4 +1,7 @@
 export const environment = {
+  production: true,
+  url: 'https://backend-apportfolio.onrender.com/',
+
   firebase: {
     projectId: 'frontend-apportfolio',
     appId: '1:514285677022:web:b4a63b272aec126cbd154f',

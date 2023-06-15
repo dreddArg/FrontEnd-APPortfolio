@@ -2,14 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Experiencia } from '../model/experiencia';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ExperienciaService {
 
-  backendURL:string = 'https://backend-apportfolio.onrender.com/';
-  //backendURL:string = 'http://localhost:8080/';
+  backendURL:string = environment.url;
   apiExperiencia: string = 'api/experiencia/';
   
   constructor(private httpClient: HttpClient) { }
