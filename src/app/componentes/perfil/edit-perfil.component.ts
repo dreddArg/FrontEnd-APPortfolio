@@ -48,7 +48,8 @@ export class EditPerfilComponent implements OnInit {
   uploadFile($event:any){
     const id = this.activatedRouter.snapshot.params['id'];
     const name = "picture_" + id;
-    this.storageService.uploadFile($event, name);
+    const path = "img/profile/";
+    this.storageService.uploadFile($event, path, name);
   }
 
 }
