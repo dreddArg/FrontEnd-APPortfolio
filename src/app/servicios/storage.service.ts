@@ -10,21 +10,21 @@ export class StorageService {
 
   constructor(private storage: Storage) { }
 
-  public uploadFile($event:any, name:string){
+  public uploadFile($event:any, path:string, name:string){
     // capturamos el archivo elegido para subir
     const file = $event.target.files[0];
     // establecemos la ruta y nombre a guardar en el storage
-    const imgRef = ref(this.storage, `img/profile/` + name)
+    const imgRef = ref(this.storage, path + name)
     // subimos archivo, esperamos promises then y catch
     uploadBytes (imgRef, file)
-      .then(response => {this.getFiles()})
+      .then(response => {this.getFiles(path)})
       .catch(error => console.log(error)
       )
   }
 
-  public getFiles(){
+  public getFiles(path:string){
     // definimos de donde vamos a buscar el archivo
-    const filesRef = ref(this.storage, `img/profile`)
+    const filesRef = ref(this.storage, path)
     // list de libreria firebase, tambien promises then y catch
     list(filesRef)
     // async para esperar respuesta tardia de la informacion
