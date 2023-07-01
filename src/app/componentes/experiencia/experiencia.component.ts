@@ -33,7 +33,6 @@ export class ExperienciaComponent implements OnInit {
     } else {
       this.isLogged = false;
     }
-
   }
 
   cargarDatosWeb(): void {

@@ -24,6 +24,8 @@ import { EditPerfilComponent } from './componentes/perfil/edit-perfil.component'
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { NewProyectosComponent } from './componentes/proyectos/new-proyectos.component';
+import { EditProyectosComponent } from './componentes/proyectos/edit-proyectos.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     NewHabilidadesComponent,
     EditHabilidadesComponent,
     EditPerfilComponent,
+    NewProyectosComponent,
+    EditProyectosComponent,
   ],
   imports: [
     BrowserModule,
