@@ -32,7 +32,7 @@ export class EditPerfilComponent implements OnInit {
     // cargamos url de imagen elegida para previsualizar
     this.perAEditar.fotoPerfilUrl = this.storageService.urlFile;
     // actualizamos los datos con lo q tomamos del form
-    this.portfolioService.updatePer(id, this.perAEditar).subscribe(
+    this.portfolioService.updatePerfil(id, this.perAEditar).subscribe(
       data => {
         // volvemos al home x router
         this.router.navigate(['']);

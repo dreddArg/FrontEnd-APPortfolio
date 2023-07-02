@@ -1,1 +1,36 @@
-<p>edit-proyectos works!</p>
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+                <div class="mb-md-5 mt-md-4 pb-5">
+                    <h3 class="fw-bold mb-2">Edición de Proyectos</h3>
+                    <p class="text-white-50 mb-5">Complete todos los datos</p>
+  
+                    <form #f="ngForm" (ngSubmit)="onUpdate()" novalidate>
+                        <div class="form-outline form-white mb-4">
+                            <label class="form-label" for="nombreProyecto">Nombre Proyecto:</label>
+                            <input type="text" id="nombreProyecto" name="nombreProyecto" class="form-control form-control-lg" [(ngModel)]="proyecto.nombreProyecto" required />
+                        </div>
+                        <div class="form-outline form-white mb-4">
+                            <label class="form-label" for="urlImg">URL ImgPrevia:</label>
+                            <input type="text" id="urlImg" name="urlImg" class="form-control form-control-lg" [(ngModel)]="proyecto.urlImg" required />
+                        </div>
+                        <div class="form-outline form-white mb-4">
+                            <label class="form-label" for="descripcion">Descripcion:</label>
+                            <textarea id="descripcion" rows="3" name="descripcion" class="form-control form-control-lg" [(ngModel)]="proyecto.descripcion" required></textarea>
+                        </div>
+                        <div class="form-outline form-white mb-4">
+                            <label class="form-label" for="link">URL Link:</label>
+                            <input type="text" id="link" name="link" class="form-control form-control-lg" [(ngModel)]="proyecto.link" required />
+                        </div>
+                        <button class="btn btn-outline-light btn-lg px-5" type="submit">Guardar</button>
+                    </form>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

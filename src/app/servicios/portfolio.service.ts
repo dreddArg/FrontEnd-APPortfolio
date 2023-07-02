@@ -15,17 +15,12 @@ export class PortfolioService {
   
   constructor(private http:HttpClient) { }
 
-  // *a remover* obtener datos de JSON
-  obtenerDatos():Observable<any> { 
-    return this.http.get('/assets/data/data.json');
-  }
-
   public obtenerPerfil(id: number):Observable<Persona> { 
     //return this.http.get('/assets/data/data.json');
     return this.http.get<Persona>(this.backendURL + this.apiPersonas + `get/${id}`);
   }
 
-  public updatePer(id: number, persona: Persona): Observable<any> {
+  public updatePerfil(id: number, persona: Persona): Observable<any> {
     return this.http.put<any>(this.backendURL + this.apiPersonas + `update/${id}`, persona);
   }
 }
